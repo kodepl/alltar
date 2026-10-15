@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: clip;
+  background: #f3ecdf;
+  color: #241c14;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Karla", "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h1 em,
+h2 em,
+h3 em,
+h1 i,
+h2 i,
+h3 i {
+  font-family: "Libre Baskerville", "Palatino Linotype", Palatino, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  overflow-wrap: anywhere;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid #3c4a32;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #3c4a32;
+  color: #f3ecdf;
+}
+
+a {
+  color: #241c14;
+}
+
+a:visited {
+  color: #241c14;
+}
+
+.mn-sheet {
+  width: 100%;
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: 1.7rem 1.15rem 2.8rem;
+}
+
+.mn-mast {
+  text-align: center;
+}
+
+.mn-brand {
+  margin: 0;
+  padding-left: 0.58em;
+  font-family: "Libre Baskerville", "Palatino Linotype", Palatino, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.74rem;
+  letter-spacing: 0.58em;
+  text-transform: uppercase;
+}
+
+.mn-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1.35rem;
+  margin-top: 0.7rem;
+}
+
+.mn-nav a {
+  font-family: "Karla", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.mn-nav a:hover,
+.mn-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.mn-main {
+  margin-top: 1.05rem;
+  padding: 1.35rem 0 1.55rem;
+  border-top: 1px solid #241c14;
+  border-bottom: 1px solid #241c14;
+}
+
+.mn-dish {
+  margin: 0;
+  font-size: clamp(1.55rem, 3.2vw, 2.05rem);
+  line-height: 1.32;
+  text-align: left;
+}
+
+.mn-dish a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mn-dish a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.mn-center {
+  text-align: center;
+}
+
+.mn-cost {
+  margin: 0.45rem 0 0;
+  color: #3c4a32;
+  font-family: "Karla", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.mn-course {
+  margin-top: 1.85rem;
+}
+
+.mn-course-name {
+  margin: 0 0 0.85rem;
+  color: #3c4a32;
+  font-size: 1.18rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.mn-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mn-items li + li {
+  margin-top: 0.62rem;
+}
+
+.mn-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mn-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.mn-leader {
+  flex: 1 0 1.1rem;
+  align-self: center;
+  height: 0;
+  min-width: 0.8rem;
+  border-bottom: 1px dotted #241c14;
+}
+
+.mn-when {
+  flex: 0 0 auto;
+  color: #3c4a32;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.mn-line:hover .mn-name {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.mn-article {
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.mn-kicker {
+  margin: 0 0 0.4rem;
+  color: #3c4a32;
+  font-family: "Libre Baskerville", "Palatino Linotype", Palatino, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.mn-plate {
+  margin: 1.25rem 0 0;
+}
+
+.mn-rim {
+  padding: 0.5rem;
+  outline: 1px solid #3c4a32;
+}
+
+.mn-rim-in {
+  padding: 0.35rem;
+  outline: 1px solid #241c14;
+}
+
+.mn-rim-in img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.mn-caption {
+  margin: 0.85rem 0 0;
+  color: #3c4a32;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.mn-prose {
+  max-width: 36rem;
+  margin: 1.35rem auto 0;
+}
+
+.mn-prose p {
+  margin: 0 0 1rem;
+}
+
+.mn-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.mn-reveal {
+  margin-top: 0.4rem;
+}
+
+.mn-reveal u,
+.mn-reveal button,
+.mn-reveal span,
+.mn-reveal em,
+.mn-reveal b {
+  font: inherit;
+  font-style: normal;
+  font-weight: 400;
+  color: #241c14;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-underline-offset: 0.16em;
+}
+
+.mn-reveal button {
+  appearance: none;
+}
+
+.mn-foot {
+  margin-top: 1.3rem;
+  text-align: center;
+}
+
+.mn-sign {
+  margin: 0;
+  font-family: "Libre Baskerville", "Palatino Linotype", Palatino, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.mn-note {
+  margin: 0.35rem 0 0;
+  font-size: 0.98rem;
+}

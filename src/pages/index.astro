@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Grupy from '../components/Grupy.astro';
+import Arkusz from '../layouts/Arkusz.astro';
+import { byNewest, formatWhen, isoDay } from '../lib/menu';
+
+const posts = byNewest(await getCollection('karta'));
+const newest = posts[0];
+if (!newest) {
+  throw new Error('Karta jest pusta');
+}
+---
+
+<Arkusz
+  title="Alltar"
+  description="Notatki Hanny Biel o stole, chlebie i gościach, którzy zostają za długo."
+>
+  <section class="mn-special">
+    <h1 class="mn-dish">
+      <a href={`/karta/${newest.slug}/`}>{newest.data.title}</a>
+    </h1>
+    <p class="mn-cost">
+      <time datetime={isoDay(newest.data.pubDate)}>{formatWhen(newest.data.pubDate)}</time>
+    </p>
+  </section>
+  <Grupy posts={posts} />
+</Arkusz>

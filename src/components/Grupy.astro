@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { courses, formatWhen, isoDay } from '../lib/menu';
+
+interface Props {
+  posts: CollectionEntry<'karta'>[];
+}
+
+const { posts } = Astro.props;
+const groups = courses.map((name, index) => ({
+  name,
+  id: `mn-course-${index}`,
+  items: posts.filter((post) => post.data.category === name),
+}));
+---
+
+<div class="mn-courses">
+  {
+    groups.map((group) => (
+      <section class="mn-course" aria-labelledby={group.id}>
+        <h2 id={group.id} class="mn-course-name">
+          {group.name}
+        </h2>
+        <ul class="mn-items">
+          {group.items.map((post) => (
+            <li>
+              <a class="mn-line" href={`/karta/${post.slug}/`}>
+                <span class="mn-name">{post.data.title}</span>
+                <span class="mn-leader" aria-hidden="true" />
+                <time class="mn-when" datetime={isoDay(post.data.pubDate)}>
+                  {formatWhen(post.data.pubDate)}
+                </time>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</div>

@@ -1,0 +1,63 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Arkusz from '../../layouts/Arkusz.astro';
+import { canonicalHref, formatWhen, isoDay } from '../../lib/menu';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('karta');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'karta'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const canonical = canonicalHref(Astro.url.pathname, Astro.site);
+const published = post.data.pubDate.toISOString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: published,
+  dateModified: published,
+  inLanguage: 'pl-PL',
+  author: {
+    '@type': 'Person',
+    name: post.data.author,
+    description: post.data.authorBio,
+  },
+  image: [post.data.image],
+  keywords: post.data.tags.join(', '),
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonical,
+  },
+};
+---
+
+<Arkusz title={`${post.data.title}, Alltar`} description={post.data.description} jsonLd={jsonLd}>
+  <article class="mn-article">
+    <p class="mn-kicker">{post.data.category}</p>
+    <h1 class="mn-dish mn-center">{post.data.title}</h1>
+    <p class="mn-cost">
+      <time datetime={isoDay(post.data.pubDate)}>{formatWhen(post.data.pubDate)}</time>
+    </p>
+    <figure class="mn-plate">
+      <div class="mn-rim">
+        <div class="mn-rim-in">
+          <img src={post.data.image} alt={post.data.imageCaption} />
+        </div>
+      </div>
+      <figcaption class="mn-caption">{post.data.imageCaption}</figcaption>
+    </figure>
+    <div class="mn-prose">
+      <Content />
+    </div>
+  </article>
+</Arkusz>

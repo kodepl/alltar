@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Grupy from '../../components/Grupy.astro';
+import Arkusz from '../../layouts/Arkusz.astro';
+import { byNewest, formatWhen, isoDay } from '../../lib/menu';
+
+const posts = byNewest(await getCollection('karta'));
+const newest = posts[0];
+if (!newest) {
+  throw new Error('Karta jest pusta');
+}
+---
+
+<Arkusz
+  title="Karta, Alltar"
+  description="Pełna karta notatek Hanny Biel: na stole, w kuchni i po gościach."
+>
+  <header class="mn-special">
+    <h1 class="mn-dish mn-center">Karta</h1>
+    <p class="mn-cost">
+      <time datetime={isoDay(newest.data.pubDate)}>{formatWhen(newest.data.pubDate)}</time>
+    </p>
+  </header>
+  <Grupy posts={posts} />
+</Arkusz>

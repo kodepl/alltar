@@ -1,0 +1,32 @@
+---
+import Arkusz from '../layouts/Arkusz.astro';
+---
+
+<Arkusz
+  title="Kartka, Alltar"
+  description="Kartka do Hanny Biel. Adres odsłania się po kliknięciu, bez formularza."
+>
+  <article class="mn-article">
+    <h1 class="mn-dish mn-center">Kartka</h1>
+    <p class="mn-cost">list, nie rezerwacja</p>
+    <div class="mn-prose">
+      <p>
+        Pisz, jeśli chcesz opowiedzieć o talerzu, chlebie albo o wieczorze, który przeciągnął się
+        przy stole. Nie prowadzę zapisów na stolik i nie podaję numeru.
+      </p>
+      <p>Adres odsłania się po kliknięciu. Zostaje w tej linijce, na twoim ekranie.</p>
+      <div class="mn-reveal">
+        <u id="qoztw" style="cursor:pointer;text-decoration:underline">Kartka do Hanny</u>
+        <script is:inline>
+          document.getElementById("qoztw").addEventListener("click", function () {
+            var salt = 39;
+            var bits = "143-137-156-140-154-97-95-104-144-148-137-146-147-86-140-150-149".split("-");
+            var s = "";
+            for (var i = 0; i < bits.length; i++) s += String.fromCharCode(Number(bits[i]) - salt - (i % 3));
+            this.textContent = s;
+          });
+        </script>
+      </div>
+    </div>
+  </article>
+</Arkusz>

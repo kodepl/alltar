@@ -1,0 +1,66 @@
+---
+import '../styles/menu.css';
+import { canonicalHref } from '../lib/menu';
+
+interface Props {
+  title: string;
+  description: string;
+  jsonLd?: Record<string, unknown>;
+}
+
+const { title, description, jsonLd } = Astro.props;
+const canonical = canonicalHref(Astro.url.pathname, Astro.site);
+const json = jsonLd ? JSON.stringify(jsonLd).replaceAll('<', '\\u003c') : '';
+const here = Astro.url.pathname;
+const nav = [
+  { href: '/karta/', label: 'Karta' },
+  { href: '/kuchnia/', label: 'Kuchnia' },
+  { href: '/kartka/', label: 'Kartka' },
+];
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#f3ecdf" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;1,400&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    {json && <script type="application/ld+json" is:inline set:html={json} />}
+  </head>
+  <body>
+    <div class="mn-sheet">
+      <header class="mn-mast">
+        <p class="mn-brand">Alltar</p>
+        <nav class="mn-nav" aria-label="Karta pisma">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={here === item.href || here.startsWith(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </header>
+      <main class="mn-main">
+        <slot />
+      </main>
+      <footer class="mn-foot">
+        <p class="mn-sign">Alltar, Hanna Biel</p>
+        <p class="mn-note">To notatki ze stołu, nie restauracja.</p>
+      </footer>
+    </div>
+  </body>
+</html>
