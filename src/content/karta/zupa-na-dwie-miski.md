@@ -10,7 +10,7 @@ tags:
   - miska
   - warząchew
 readingTime: 4
-image: https://images.unsplash.com/photo-1543353071?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1543353071-087092ec393a?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, miska zupy z cudzej kuchni, nie moje naczynie.
 ---
 

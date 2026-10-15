@@ -10,7 +10,7 @@ tags:
   - rano
   - skórka
 readingTime: 4
-image: https://images.unsplash.com/photo-1414235077428?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, restauracyjny stół z cudzej sali, nie moja zastawa.
 ---
 

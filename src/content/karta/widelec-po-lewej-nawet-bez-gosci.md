@@ -10,7 +10,7 @@ tags:
   - nakrycie
   - samotnie
 readingTime: 4
-image: https://images.unsplash.com/photo-1559339352?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, sztućce z restauracyjnego zdjęcia, nie mój widelec.
 ---
 

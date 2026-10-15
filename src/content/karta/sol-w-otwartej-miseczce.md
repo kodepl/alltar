@@ -10,7 +10,7 @@ tags:
   - miseczka
   - wilgoć
 readingTime: 4
-image: https://images.unsplash.com/photo-1540189549336?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, talerz z obcego kadru, sól na zdjęciu nie stoi u mnie.
 ---
 

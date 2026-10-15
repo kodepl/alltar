@@ -10,7 +10,7 @@ tags:
   - stół
   - wieczór
 readingTime: 4
-image: https://images.unsplash.com/photo-1519710164239?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, wnętrze ze świecą z banku zdjęć, nie mój pokój.
 ---
 

@@ -10,7 +10,7 @@ tags:
   - obiad
   - garnek
 readingTime: 4
-image: https://images.unsplash.com/photo-1488459716781?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, warzywa z czyjegoś koszyka, nie resztki z mojej lodówki.
 ---
 

@@ -10,7 +10,7 @@ tags:
   - plama
   - prążki
 readingTime: 4
-image: https://images.unsplash.com/photo-1478144592103?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, tkanina i nakrycie z czyjegoś stołu, nie mój obrus.
 ---
 

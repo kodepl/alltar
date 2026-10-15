@@ -10,7 +10,7 @@ tags:
   - nóż
   - goście
 readingTime: 4
-image: https://images.unsplash.com/photo-1509440159596?auto=format&fit=crop&w=1600&q=80
+image: https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=1600&q=80
 imageCaption: Motyw z Unsplash, bochenek na czyimś blacie, nie chleb z mojej kuchni.
 ---
 
