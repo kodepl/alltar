@@ -9,7 +9,6 @@ category: "Na stole"
 tags: ["ankieta", "głosowanie", "decyzja"]
 readingTime: 5
 image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&h=900&q=80"
-imageCaption: "Talerze na stole, motyw z Unsplash."
 ---
 
 ## Kłopot przy lodówce
